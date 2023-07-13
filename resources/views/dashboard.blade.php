@@ -27,6 +27,7 @@
                                         <h3 class="text-xl font-bold mb-2">{{ $blog->title }}</h3>
                                         {{-- <p class="text-gray-600 truncate">{!! $blog->content !!}</p> --}}
                                         <p class="text-gray-800 text-left">Author: {{ $blog->author->name }}</p>
+                                        <p class="text-gray-500 text-right">Published At: {{ $blog->created_at}}</p>
                                     </div>
                                 </a>
                             </li>

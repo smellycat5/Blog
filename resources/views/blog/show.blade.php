@@ -5,23 +5,25 @@
                 <div class="p-6 text-gray-900">
                     <div>
                         <h1 class="text-3xl font-bold">{{ $blog->title }}</h1>
-                    </div>  
+
+                    </div>
                     <div class="flex justify-end mb-4">
-                        <a href="{{ route('blog.edit', $blog->id) }}" class="text-blue-500 hover:text-blue-600 font-semibold mr-2">Edit</a>
-                        <form action="{{ route('blog.destroy', $blog->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this blog post?');">
+                        <a href="{{ route('blog.edit', $blog->id) }}"
+                            class="text-blue-500 hover:text-blue-600 font-semibold mr-2">Edit</a>
+                        <form action="{{ route('blog.destroy', $blog->id) }}" method="POST"
+                            onsubmit="return confirm('Are you sure you want to delete this blog post?');">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="text-red-500 hover:text-red-600 font-semibold">Delete</button>
                         </form>
+
                     </div>
-                    
-                    <div>
-                        <p class="text-gray-600 mb-4">Author: {{ $blog->author->name }}</p>
-                    </div>
-                    <p class="text-gray-600 break-words">{!! $blog->content !!}</p>
+                    <p class="text-gray-800 text-left">Author: {{ $blog->author->name }}</p>
+                    <p class="text-gray-500 text-left">Published At: {{ $blog->created_at }}</p>
+                    <p class="text-gray-600 break-words py-6">{!! $blog->content !!}</p>
                 </div>
             </div>
         </div>
     </div>
-    
+
 </x-app-layout>
