@@ -12,8 +12,10 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
         <!-- Scripts -->
-        <script src="{{ asset('ckeditor4/ckeditor.js') }}"></script>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <script src="https://cdn.ckeditor.com/ckeditor5/37.0.1/classic/ckeditor.js"></script>
+        {{-- <script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/ckeditor.js"></script> --}}
+
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
@@ -34,5 +36,5 @@
             </main>
         </div>
     </body>
-
+    @livewireScripts
 </html>

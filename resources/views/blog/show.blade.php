@@ -18,7 +18,7 @@
                     <div>
                         <p class="text-gray-600 mb-4">Author: {{ $blog->author->name }}</p>
                     </div>
-                    <p class="text-gray-600 break-words">{{ $blog->content }}</p>
+                    <p class="text-gray-600 break-words">{!! $blog->content !!}</p>
                 </div>
             </div>
         </div>
