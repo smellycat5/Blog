@@ -3,7 +3,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                    <h1 class="text-3xl font-bold">Create Blog</h1>
+                    <h1 class="font-bold">Create Blog</h1>
                     <form action="{{ route('blog.store') }}" method="POST">
                         @csrf
 
@@ -103,7 +103,7 @@
                         </script>
                         <div class="mt-6">
                             <button type="submit"
-                                class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-lg">Create</button>
+                                class="rounded-full bg-violet-500 hover:bg-violet-600 text-white font-semibold px-4 py-2 ">Create</button>
                         </div>
                     </form>
                 </div>
